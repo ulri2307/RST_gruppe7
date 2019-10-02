@@ -1,0 +1,33 @@
+/*-----Generelt-----*/
+
+body {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: inherit;
+}
+
+/*-----Class'-----*/
+
+.valgt {}
+
+.animated {}
+
+.fadeIn {}
+
+/*-----Menu-----*/
+
+.navigation {
+    background-color: black;
+    height: 10vh;
+}
