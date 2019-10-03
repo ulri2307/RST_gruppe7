@@ -10,7 +10,6 @@ li {
 
 a {
     text-decoration: none;
-    color: black;
 }
 
 a:visited {
@@ -19,15 +18,24 @@ a:visited {
 
 /*-----Class'-----*/
 
-.valgt {}
+.valgt {
+    color: white;
+}
 
 .animated {}
 
-.fadeIn {}
+
 
 /*-----Menu-----*/
 
 .navigation {
     background-color: black;
     height: 10vh;
+}
+
+/*-----Aktuelle kampagner-----*/
+
+.other_wrapper {
+    background-color: #414b5a;
+    color: white;
 }
