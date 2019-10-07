@@ -10,17 +10,42 @@ li {
 
 a {
     text-decoration: none;
-    color: black;
+    transition: .3s;
 }
 
 a:visited {
     color: inherit;
 }
 
-/*-----Class'-----*/
+h1,
+h2,
+h3 {
+    font-family: safety;
+    font-weight: 100;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+}
+
+img {
+    width: 100%;
+}
+
+/*-----Animation-----*/
 
 .valgt {
     color: white;
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.hide {
+    opacity: 0;
 }
 
 /*-----Menu-----*/
@@ -28,6 +53,89 @@ a:visited {
 .navigation {
     background-color: #28292C;
     height: 10vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 2000;
+}
+
+.logo img {
+    height: 30px;
+    width: 180px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.mainmenu-wrapper {
+    background-color: #28292C;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 10vh;
+    transition: transform .3s ease-in, opacity .3s ease-in, width .4s ease-out;
+}
+
+.navigation li.nav-item a {
+    color: #ccc;
+    font-family: Safety;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    padding: 25px 50px 25px 17px;
+    position: relative;
+    transition: all .3s ease;
+    border-bottom: 1px solid #373d46;
+    overflow: hidden;
+    text-align: left;
+}
+
+ul.level-1 {
+    display: block;
+    padding: 30px 50px 25px 17px;
+    position: relative;
+    transition: all .3s ease;
+    overflow: hidden;
+}
+
+
+/*-----Menu-funktion-----*/
+
+
+/*-----Splash-----*/
+
+
+
+/*-----Om kampagnen-----*/
+
+.om_wrapper {
+    padding: 1rem 1rem 4rem;
+    color: #373d46;
+}
+
+.om_wrapper h1 {
+    font-size: 2.2rem;
+    margin: 2rem 0 1rem;
+    font-weight: 100;
+}
+
+.om_wrapper p {
+    font-weight: 100;
+}
+
+.om_txt {
+    max-width: 1024px;
+}
+
+
+
+
+/*-----Kampagne video-----*/
+.videoInfo_wrapper {
+    background-color: #eaeaea;
+}
+
+.videoInfo {
+    display: flex;
+    flex-direction: row;
 }
 
 /*-----Aktuelle kampagner-----*/
@@ -35,7 +143,37 @@ a:visited {
 .other_wrapper {
     background-color: #414b5a;
     color: white;
+    padding: 1rem;
 }
+
+.overskrift {
+    margin: 2.7rem 0 2rem;
+}
+
+.other_wrapper h1 {
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: white;
+}
+
+.other {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1024px;
+}
+
+.other h1 {
+    margin: 0.7rem 0;
+    font-size: 2.3rem;
+}
+
+.other p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+
 
 /*-----Footer-----*/
 
@@ -61,4 +199,78 @@ footer {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+footer p {
+    font-family: safety;
+}
+
+footer a {
+    font-family: safety;
+}
+
+
+
+/*-----Media-----*/
+
+
+@media screen and (min-width: 768px) {
+    /*-----Aktuelle kampagner-----*/
+
+    .other_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .other_img {
+        max-width: 24.3%;
+        border: none;
+    }
+
+    .other_txt {
+        margin: 0 2rem;
+    }
+
+    .other {
+        flex-wrap: nowrap;
+        margin: 1.2rem 0 0;
+    }
+
+    .other img {
+        height: 100%;
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .navigation ul.level-1 {
+        animation: none;
+        overflow: auto;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        padding-top: 100px;
+    }
+
+
+    /*-----Om kampagnen-----*/
+
+    .om_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .om_txt {
+        font-size: 1.4rem;
+    }
+
+
 }
