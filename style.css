@@ -31,17 +31,15 @@ p {
 
 img {
     width: 100%;
+    border: 0;
+    height: auto;
 }
+
 
 /*-----Animation-----*/
 
 .valgt {
     color: white;
-}
-
-.animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
 }
 
 .hide {
@@ -50,12 +48,22 @@ img {
 
 /*-----Menu-----*/
 
+.hidden {
+    /*Skubber menuen ud til højre side*/
+    transform: translateX(100%);
+    opacity: 0;
+}
+
 .navigation {
-    background-color: #28292C;
-    height: 10vh;
-    width: 100vw;
+    background-color: #28292c;
+    width: 100%;
+    height: 50px;
     position: fixed;
-    z-index: 2000;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    transition: all .5s;
+    display: block;
 }
 
 .logo img {
@@ -70,8 +78,9 @@ img {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    top: 10vh;
+    top: 7.2vh;
     transition: transform .3s ease-in, opacity .3s ease-in, width .4s ease-out;
+    display: block;
 }
 
 .navigation li.nav-item a {
@@ -97,18 +106,150 @@ ul.level-1 {
 }
 
 
-/*-----Menu-funktion-----*/
+/*-----Menu-knap-----*/
+
+/*burger knappen*/
+
+.menu-toggle {
+    position: absolute;
+    border: none;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 2px;
+    top: 0;
+    right: 0;
+    padding: 0 15px;
+    z-index: 9999;
+    transition: .2s ease-out;
+    background-color: #28292C;
+    cursor: pointer;
+}
+
+.lines {
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    margin: 3px 0;
+    transition: all .3s ease-in;
+    border-radius: 5px;
+}
+
+/*animation der får stregerne i burgermenuen til at dreje om til et kryds*/
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-1px, 4px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(46deg) translate(-3px, -6px);
+}
 
 
-/*-----Splash-----*/
+/*-----Splash/box-----*/
 
+.splash_wrapper {
+    display: none;
+    margin-top: 50px;
+    animation-duration: 1s;
+    transition: all .3s ease;
+}
+
+.box {
+    width: 100%;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    background-color: #373d46;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-txt {
+    width: 100%;
+    z-index: 9980;
+    display: block;
+    left: 0;
+    right: 0;
+    display: none;
+    color: white;
+    font-family: safety;
+    color: #ccc;
+    position: fixed;
+}
+
+.box-pil {
+    display: none;
+}
+
+.box-pil img {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.txt1:hover {
+    color: white;
+}
+
+.txt2:hover {
+    color: white;
+}
+
+.box-img {
+    background-image: url(img/topbanner_nederen_2018.jpg);
+    height: 500px;
+    width: 100%;
+    margin: 60px 0;
+    right: 0;
+    top: 0;
+    width: auto;
+    max-width: none;
+    min-width: 100%;
+}
+
+.toBoxe {
+    background-color: rgba(65, 74, 90, .85);
+    position: absolute;
+    max-width: 640px;
+    left: 0;
+    bottom: 89px;
+    margin: 0 auto;
+    height: 158px;
+    transition: all 0.3s ease;
+    transform: translateX(-100%);
+}
+
+.lillebox {
+    background-color: #28292c;
+    color: #fff;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    font-size: 90px;
+    line-height: 1.2;
+}
+
+.storbox {
+    float: right;
+    color: white;
+}
 
 
 /*-----Om kampagnen-----*/
 
 .om_wrapper {
-    padding: 1rem 1rem 4rem;
+    padding: 1rem 1rem 3rem;
     color: #373d46;
+    margin-top: 13vh;
 }
 
 .om_wrapper h1 {
@@ -126,16 +267,83 @@ ul.level-1 {
 }
 
 
-
-
 /*-----Kampagne video-----*/
+
 .videoInfo_wrapper {
     background-color: #eaeaea;
+    padding: 1rem 1rem 3rem;
+    height: 700px;
+}
+
+.videoInfo_wrapper h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    font-weight: 100;
 }
 
 .videoInfo {
-    display: flex;
-    flex-direction: row;
+    width: 1024px;
+}
+
+.videoInfo_video {
+    max-width: 1024px;
+    height: 100px;
+}
+
+/*-----Kampagne spil-----*/
+
+.section_wrapper {
+    padding: 1rem 1rem 3rem;
+}
+
+.game {
+    background-color: #414b5a;
+    color: white;
+    height: 700px;
+}
+
+.section_wrapper h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    font-weight: 100;
+}
+
+.section {
+    max-width: 1024px;
+}
+
+.game .section_item {
+    height: 400px;
+}
+
+/*-----Teaser box-----*/
+
+.teaser_wrapper {
+    background-color: #eaeaea;
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+
+.teaser_first {
+    max-width: 1024px;
+}
+
+/*-----Historier-----*/
+
+.historier_wrapper {
+    padding: 1rem 1rem 3rem;
+}
+
+.historier_wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    font-weight: 100;
+}
+
+.historier {
+    max-width: 1024px;
 }
 
 /*-----Aktuelle kampagner-----*/
@@ -207,14 +415,127 @@ footer p {
 
 footer a {
     font-family: safety;
+    color: #9ea1a5;
+    font-weight: 100;
+}
+
+.soMe_footer {
+    display: flex;
+}
+
+.circle {
+    width: 60px;
+    margin-right: 10px;
+    transition: all .3s ease;
 }
 
 
+.facebook:hover {
+    background-image: url(logo/facebook.svg);
+    background-size: 60px;
+    transition: all .3s ease;
+}
+
+.linkedin:hover {
+    background-image: url(logo/in.svg);
+    background-size: 60px;
+    transition: all .3s ease;
+}
+
+.twitter:hover {
+    background-image: url(logo/twitter.svg);
+    background-size: 60px;
+    background-repeat: no-repeat;
+    transition: all .3s ease;
+}
+
+.circle:hover img {
+    opacity: 0;
+}
 
 /*-----Media-----*/
 
-
 @media screen and (min-width: 768px) {
+
+    /*-----Splash/grå box-----*/
+
+    .splash_wrapper {
+        display: block;
+    }
+
+    .box-txt {
+        display: block;
+    }
+
+    .toBoxe {
+        transform: translateX(0%);
+    }
+
+    .lillebox {
+        width: 8.33333333%;
+    }
+
+    .storbox {
+        width: 91.66666667%;
+    }
+
+    /*-----Om kampagnen-----*/
+
+    .om_wrapper {
+        margin-top: 600px;
+    }
+
+    /*-----Kampagne spil-----*/
+
+    .section_wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .section_first {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .game .section_item {
+        width: 600px;
+    }
+
+    .section_txt {
+        padding-right: 1em;
+    }
+
+    /*-----Historier-----*/
+
+    .historier_wrapper {
+        padding: 1rem 1rem 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .historier_first {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .historier_item {
+        flex-basis: 500px;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .historier_item img {
+        width: 300px;
+    }
+
+    .historier_txt {
+        flex-basis: 500px;
+        flex-grow: 2;
+
+    }
+
     /*-----Aktuelle kampagner-----*/
 
     .other_wrapper {
@@ -242,20 +563,128 @@ footer a {
         width: 100%;
     }
 
-
+    .footer_container {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 @media screen and (min-width: 1024px) {
 
-    .navigation ul.level-1 {
-        animation: none;
-        overflow: auto;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    .navigation {
+        height: 70px;
+    }
+
+    .logo-container {
+        padding: 10px;
+    }
+
+    .logo {
+        z-index: 9999;
+    }
+
+    .mainmenu-wrapper {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0);
+        position: fixed;
         top: 0;
-        padding-top: 100px;
+        transform: translateX(0%);
+        opacity: 1;
+        justify-content: flex-end;
+        width: 100%;
+        height: 10vh;
+        margin: 0;
+        opacity: 1;
+        z-index: 300;
+    }
+
+    .navigation li.nav-item a {
+        color: #ccc;
+        font-family: Safety;
+        font-size: 14px;
+        text-decoration: none;
+        position: inherit;
+        transition: all .3s ease;
+        padding: 25px;
+        overflow: hidden;
+        text-align: inherit;
+        height: 20px;
+        margin-right: 15px;
+        border-bottom: 0;
+    }
+
+    .nav-item {
+        height: 68px
+    }
+
+    li.nav-item:hover a {
+        color: #fff;
+        background-color: #373d46;
+    }
+
+    ul.level-1 {
+        display: inline-block;
+        padding: 0;
+        line-height: 22px;
+        position: static;
+        vertical-align: middle;
+        text-align: right;
+    }
+
+
+    /*-----Menu-knap-----*/
+
+    /*burger knappen*/
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .lines {
+        display: none;
+    }
+
+
+    /*-----Splash/grå box-----*/
+
+    .splash_wrapper {
+        margin-top: 70px;
+    }
+
+    .box-txt {
+        display: flex;
+        text-align: left;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        padding-left: 10px;
+        position: relative;
+    }
+
+    .box-pil {
+        margin: 0 0 0 30px;
+        align-self: center;
+        display: block;
+        z-index: 1;
+    }
+
+    .box-pil a {
+        font-size: 0.9rem;
+        z-index: 1;
+    }
+
+    .box-pil img {
+        z-index: 1;
+    }
+
+    .box-img {
+        background-image: url(img/topbanner_nederen_2018.jpg);
+        height: 500px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .toBoxe {
+        bottom: 68px;
     }
 
 
@@ -265,11 +694,40 @@ footer a {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
     }
 
     .om_txt {
         font-size: 1.4rem;
+    }
+
+    /*-----Kampagne video-----*/
+
+    .videoInfo_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .videoInfo {
+        max-width: 1024px;
+    }
+
+    /*-----Teaser box-----*/
+
+    .teaser_wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*-----Historier-----*/
+
+    .historier .section_first {
+        display: block;
+    }
+
+    .section_item img {
+        max-width: 350px;
     }
 
 
