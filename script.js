@@ -1,11 +1,11 @@
 window.addEventListener("load", sidenVises);
 
-const button = document.querySelector(".menu-toggle");
+const burgerButton = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".mainmenu-wrapper");
 
 function sidenVises() {
     console.log("sidenVises ok")
-    button.addEventListener("click", toggleMenu);
+    burgerButton.addEventListener("click", toggleMenu);
 }
 
 function toggleMenu() {
@@ -17,11 +17,11 @@ function toggleMenu() {
     if (erSkjult == true) {
         console.log("Bruger icon vises")
 
-        button.classList.add("menu-toggle");
-        button.classList.remove("toggle");
+        burgerButton.classList.add("menu-toggle");
+        burgerButton.classList.remove("toggle");
 
     } else {
         console.log("burger icon gemmes")
-        button.classList.add("toggle");
+        burgerButton.classList.add("toggle");
     }
 }
