@@ -1,7 +1,14 @@
 /*-----Generelt-----*/
 
+
 body {
     margin: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+html {
+    max-width: 100vw;
 }
 
 li {
@@ -42,27 +49,30 @@ img {
     color: white;
 }
 
-.hide {
-    opacity: 0;
-}
-
 .gem {
     position: absolute;
     top: -9999px;
     left: -9999px;
 }
 
+.skjult {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+}
+
 .hidden {
     /*Skubber menuen ud til højre side*/
     transform: translateX(100%);
     opacity: 0;
+    display: none;
 }
 
 /*-----Menu-----*/
 
 .navigation {
     background-color: #28292c;
-    width: 100vw;
+    max-width: 100vw;
     height: 50px;
     position: fixed;
     z-index: 9999;
@@ -70,6 +80,7 @@ img {
     top: 0;
     transition: all .5s;
     display: block;
+
 }
 
 .logo img {
@@ -77,6 +88,10 @@ img {
     width: 180px;
     padding-left: 15px;
     padding-top: 10px;
+}
+
+.logo-container {
+    width: 100vw;
 }
 
 .mainmenu-wrapper {
@@ -193,6 +208,10 @@ ul.level-1 {
     display: none;
 }
 
+.box-wrapper {
+    margin-left: 8.7vw;
+}
+
 .box-pil img {
     width: 20px;
     height: 20px;
@@ -210,7 +229,7 @@ ul.level-1 {
 }
 
 .box-img {
-    background-image: url(img/topbanner_nederen_2018.jpg);
+    background-image: url(img/splash.png);
     height: 500px;
     width: 100%;
     margin: 60px 0;
@@ -227,9 +246,9 @@ ul.level-1 {
     max-width: 640px;
     position: absolute;
     left: 0;
-    top: 56.3vh;
+    top: 59vh;
     margin: 0 auto;
-    height: 158px;
+    height: 130px;
     transition: all 0.3s ease;
     transform: translateX(-100%);
 }
@@ -287,6 +306,7 @@ ul.level-1 {
     font-size: 2.3rem;
     margin-bottom: 1rem;
     font-weight: 100;
+    max-width: 100%;
 }
 
 .videoInfo {
@@ -357,8 +377,12 @@ ul.level-1 {
     font-size: 1rem;
 }
 
+.quiz p {
+    font-size: 1.2rem;
+}
+
 .quiz a {
-    color: white;
+    color: #fd6d6f;
     font-family: safety;
     transition: all .3s ease;
     margin: 4rem 0;
@@ -391,6 +415,11 @@ ul.level-1 {
 
 .historier {
     max-width: 1024px;
+}
+
+.historier_txt a {
+    color: #fd6d6f;
+    font-family: safety;
 }
 
 
@@ -517,6 +546,12 @@ footer a {
     font-weight: 100;
 }
 
+.test_wrapper img {
+
+    height: 300px;
+    max-width: 700px;
+}
+
 .test {
     max-width: 1024px;
 }
@@ -568,16 +603,36 @@ footer a {
     font-size: 1.3rem;
     background-color: #9ea1a5;
     margin: 10px;
+    color: white;
 }
 
 .spm-knap:hover {
     transform: scale(1.05);
     background-color: #3f0;
+    color: black;
 }
 
 .spm_item img {
     height: 300px;
     max-width: 700px;
+}
+
+/*Resultat*/
+
+.resultat_wrapper {
+    margin-top: 15vh;
+    padding: 1rem 1rem 3rem;
+    transition: all .3s ease;
+}
+
+.resultat_wrapper h2 {
+    font-size: 2.2rem;
+    margin: 2rem 0 1rem;
+    font-weight: 100;
+}
+
+.resultat {
+    max-width: 1024px;
 }
 
 .igen {
@@ -706,8 +761,13 @@ footer a {
 
     /*-----Quiz-----*/
 
+    .quiz {
+        display: block;
+        justify-content: flex-start;
+    }
+
     .quiz h3 {
-        margin: 4rem 0;
+        margin: 3rem 0;
     }
 
     /*-----Aktuelle kampagner-----*/
@@ -755,6 +815,18 @@ footer a {
         justify-content: center;
         margin-top: 6vh;
     }
+
+    .resultat_wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 6vh;
+    }
+
+    .resultat_item img {
+        height: 300px;
+        max-width: 700px;
+    }
+
 }
 
 
@@ -762,6 +834,7 @@ footer a {
 
     .navigation {
         height: 70px;
+        display: flex;
     }
 
     .logo-container {
@@ -783,8 +856,17 @@ footer a {
         width: 100%;
         height: 10vh;
         margin: 0;
-        opacity: 1;
         z-index: 300;
+    }
+
+    .omOs {
+        margin-right: 20vw;
+        /*margin-right: 300px;*/
+    }
+
+    .logo-container {
+        margin-left: 9.3vw;
+        /*margin-left: 117px;*/
     }
 
     .navigation li.nav-item a {
@@ -794,11 +876,10 @@ footer a {
         text-decoration: none;
         position: inherit;
         transition: all .3s ease;
-        padding: 25px;
+        padding: 25px 15px;
         overflow: hidden;
         text-align: inherit;
         height: 20px;
-        margin-right: 15px;
         border-bottom: 0;
     }
 
@@ -866,14 +947,15 @@ footer a {
     }
 
     .box-img {
-        background-image: url(img/topbanner_nederen_2018.jpg);
+        background-image: url(img/splash.png);
         height: 500px;
         width: 100%;
         margin: 0;
+        position: 0;
     }
 
     .toBoxe {
-        top: 58.8vh;
+        top: 63.5vh;
     }
 
 

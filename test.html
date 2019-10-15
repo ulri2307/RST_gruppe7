@@ -7,6 +7,15 @@
     <title>Fart-test</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="76x76" href="logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon-16x16.png">
+    <link rel="manifest" href="logo/site.webmanifest">
+    <link rel="mask-icon" href="logo/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="logo/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="logo/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="noindex">
 </head>
 
@@ -70,7 +79,7 @@
                 </div>
                 <div class="box-pil">
                     <img src="logo/pil.svg" alt="pil">
-                    <a class="txt2" href="index.html">????</a>
+                    <a class="txt2" href="index.html">Hold farten nede</a>
                 </div>
             </div>
         </div>
@@ -88,10 +97,10 @@
             <h2>Prøv vores test her!:</h2>
             <div class="test_first">
                 <div class="test_item">
-                    <img src="" alt="test-forside">
+                    <img src="img/start.svg" alt="test-forside">
                 </div>
                 <div class="test_txt">
-                    <p>Vores test er super god og nice. Kan du klare den?.</p>
+                    <p>Hvor hurtigt vil du kører på denne vej?</p>
                     <button class="start-test">Start test!</button>
                 </div>
             </div>
@@ -111,7 +120,7 @@
                 <div class="spm_item">
                     <img src="img/byvej.jpg" alt="vej">
                 </div>
-                <p>Vores test er super god og nice. Kan du klare den?.</p>
+                <p>Hvor hurtigt vil du kører på denne vej?</p>
                 <div class="spm_txt">
                     <button class="spm-knap daerlig-knap1">60 km/t</button>
                     <button class="spm-knap god-knap1">50 km/t</button>
@@ -135,10 +144,10 @@
                 <div class="spm_item">
                     <img src="img/trafik.jpg" alt="vej">
                 </div>
-                <p>Vores test er super god og nice. Kan du klare den?.</p>
+                <p>Hvor hurtigt vil du kører på denne vej?</p>
                 <div class="spm_txt">
                     <button class="spm-knap god-knap2">110 km/t</button>
-                    <button class="spm-knap daerlig-knap2">130 km/t</button>
+                    <button class="spm-knap daerlig-knap2">135 km/t</button>
                     <button class="spm-knap middel-knap2"> 100 km/t</button>
                 </div>
             </div>
@@ -159,7 +168,7 @@
                     <img src="img/skov.jpg" alt="vej">
                 </div>
                 <div class="spm_txt">
-                    <p>Vores test er super god og nice. Kan du klare den?.</p>
+                    <p>Hvor hurtigt vil du kører på denne vej?</p>
                     <button class="spm-knap god-knap3">80 km/t</button>
                     <button class="spm-knap middel-knap3">60 km/t</button>
                     <button class="spm-knap daerlig-knap3">100 km/t</button>
@@ -172,24 +181,23 @@
 
     <section class="spm_wrapper s4 gem">
         <div class="spm">
-            <div class="box-pil tilbage">
-                <div class="tilbage">
-                    <img src="logo/pil.svg" alt="pil">
-                    <a class="txt2" href="index.html">Tilbage til kampagnen</a>
+            <div class="tilbage">
+                <img src="logo/pil.svg" alt="pil">
+                <a class="txt2" href="index.html">Tilbage til kampagnen</a>
+            </div>
+            <h2>Spørgsmål 4:</h2>
+            <div class="spm_first">
+                <div class="spm_item">
+                    <img src="img/vejskole.jpg" alt="vej">
                 </div>
-                <h2>Spørgsmål 4:</h2>
-                <div class="spm_first">
-                    <div class="spm_item">
-                        <img src="img/vejarbejde.jpg" alt="vej">
-                    </div>
-                    <div class="spm_txt">
-                        <p>Vores test er super god og nice. Kan du klare den?.</p>
-                        <button class="spm-knap middel-knap4">30 km/t</button>
-                        <button class="spm-knap daerlig-knap4">60 km/t</button>
-                        <button class="spm-knap god-knap4">40 km/t</button>
-                    </div>
+                <div class="spm_txt">
+                    <p>Hvor hurtigt vil du kører på denne vej?</p>
+                    <button class="spm-knap middel-knap4">30 km/t</button>
+                    <button class="spm-knap daerlig-knap4">60 km/t</button>
+                    <button class="spm-knap god-knap4">40-50 km/t</button>
                 </div>
             </div>
+        </div>
     </section>
 
     <section class="test_wrapper klar gem">
@@ -197,19 +205,20 @@
 
     <!--Test slut - god-->
 
-    <section class="test_wrapper god gem">
-        <div class="test">
+    <section class="resultat_wrapper god gem">
+        <div class="resultat">
             <div class="tilbage">
                 <img src="logo/pil.svg" alt="pil">
                 <a class="txt2" href="index.html">Tilbage til kampagnen</a>
             </div>
-            <h2>Sådan. Du er god til at holde farten!</h2>
-            <div class="test_first">
-                <div class="test_item">
-                    <img src="img/brug_2sek.jpg" alt="portraet">
+            <h2>Sådan. Du er god til at holde farten nede!</h2>
+            <div class="resultat_first">
+                <div class="resultat_item">
+                    <img src="img/godt.svg" alt="vinder">
                 </div>
-                <div class="test_txt">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sunt non quos possimus, rem consequuntur modi id, suscipit aliquam neque doloremque soluta, quibusdam aperiam ipsum vitae. Alias quibusdam, quo voluptates.</p>
+                <div class="resultat_txt">
+                    <p>Godt gået! Det kan være svært, at holde foden fra speederen, men du har styr på det.</p>
+                    <p>Du ved, hvor og hvornår man skal sænke farten. </p>
                     <button class="igen igen1">Prøv testen igen</button>
                 </div>
             </div>
@@ -218,19 +227,19 @@
 
     <!--Test slut - middel-->
 
-    <section class="test_wrapper middel gem">
-        <div class="test">
+    <section class="resultat_wrapper middel gem">
+        <div class="resultat">
             <div class="tilbage">
                 <img src="logo/pil.svg" alt="pil">
                 <a class="txt2" href="index.html">Tilbage til kampagnen</a>
             </div>
             <h2>Du kører fint, men...</h2>
-            <div class="test_first">
-                <div class="test_item">
-                    <img src="img/brug_2sek.jpg" alt="portraet">
+            <div class="resultat_first">
+                <div class="resultat_item">
+                    <img src="img/middel.svg" alt="okay">
                 </div>
-                <div class="test_txt">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sunt non quos possimus, rem consequuntur modi id, suscipit aliquam neque doloremque soluta, quibusdam aperiam ipsum vitae. Alias quibusdam, quo voluptates.</p>
+                <div class="resultat_txt">
+                    <p>Du gør det fint, men man kan altid forbedre sig. </p>
                     <button class="igen igen2">Prøv testen igen</button>
                 </div>
             </div>
@@ -239,19 +248,20 @@
 
     <!--Test slut - dårlig-->
 
-    <section class="test_wrapper daerlig gem">
-        <div class="test">
+    <section class="resultat_wrapper daerlig gem">
+        <div class="resultat">
             <div class="tilbage">
                 <img src="logo/pil.svg" alt="pil">
                 <a class="txt2" href="index.html">Tilbage til kampagnen</a>
             </div>
             <h2>Du er alt for hurtig!</h2>
-            <div class="test_first">
-                <div class="test_item">
-                    <img src="img/brug_2sek.jpg" alt="portraet">
+            <div class="resultat_first">
+                <div class="resultat_item">
+                    <img src="img/d%C3%A5rligt.svg" alt="taber">
                 </div>
-                <div class="test_txt">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sunt non quos possimus, rem consequuntur modi id, suscipit aliquam neque doloremque soluta, quibusdam aperiam ipsum vitae. Alias quibusdam, quo voluptates.</p>
+                <div class="resultat_txt">
+                    <p>Hold farten nede! Der sker mange ulykker, og det er selv ved de små fartoverskridelser.</p>
+                    <p>Vi anbefaler, at du holder foden fra gassen. Husk på konsekvenserne!</p>
                     <button class="igen igen3">Prøv testen igen</button>
                 </div>
             </div>
@@ -471,12 +481,12 @@
                 console.log(point);
                 godSvar();
 
-            } else if (point > 0) {
+            } else if (point <= 4) {
                 console.log(point);
                 middelSvar();
-            } else if (point >= 4) {
+            } else if (point > 4) {
                 console.log(point);
-                daerligPoint();
+                daerligSvar();
             }
         }
 
