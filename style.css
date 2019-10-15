@@ -714,9 +714,6 @@ footer a {
         flex-direction: row-reverse;
     }
 
-    .game .section_item {
-        width: 600px;
-    }
 
     .section_txt {
         padding-right: 1em;
@@ -768,6 +765,16 @@ footer a {
 
     .quiz h3 {
         margin: 3rem 0;
+    }
+
+    /*-----Game-----*/
+
+    .game .section_txt {
+        width: 200px;
+    }
+
+    .game .section_item {
+        width: 500px;
     }
 
     /*-----Aktuelle kampagner-----*/
@@ -1003,6 +1010,16 @@ footer a {
 
     .section_item img {
         max-width: 350px;
+    }
+
+    /*-----Game-----*/
+
+    .game .section_item {
+        width: 100vw;
+    }
+
+    .game .section_txt {
+        width: 800px;
     }
 
 }
