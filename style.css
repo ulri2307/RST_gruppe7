@@ -220,6 +220,11 @@ ul.level-1 {
     display: inline-block;
 }
 
+.txt1,
+.txt2 {
+    color: #ccc;
+}
+
 .txt1:hover {
     color: white;
 }
@@ -230,6 +235,9 @@ ul.level-1 {
 
 .box-img {
     background-image: url(img/splash.png);
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: center;
     height: 500px;
     width: 100%;
     margin: 60px 0;
@@ -246,7 +254,7 @@ ul.level-1 {
     max-width: 640px;
     position: absolute;
     left: 0;
-    top: 59vh;
+    top: 480px;
     margin: 0 auto;
     height: 130px;
     transition: all 0.3s ease;
@@ -298,25 +306,82 @@ ul.level-1 {
 .videoInfo_wrapper {
     background-color: #eaeaea;
     padding: 1rem 1rem 3rem;
-    height: 700px;
     margin-top: 13vh;
+    max-width: 100vw;
 }
 
 .videoInfo_wrapper h2 {
-    font-size: 2.3rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     font-weight: 100;
-    max-width: 100%;
+    width: 350px;
 }
 
-.videoInfo {
-    width: 1024px;
+.videoInfo a {
+    color: #fd6d6f;
 }
 
 .videoInfo_video {
-    max-width: 1024px;
-    height: 100px;
+    width: 100%;
 }
+
+iframe {
+    width: 100%;
+}
+
+.videoInfo a {
+    color: #fd6d6f;
+    font-family: safety;
+    font-size: 1rem;
+    transition: all .3s ease;
+    margin: 4rem 0;
+}
+
+/*-----Video portfolio-----*/
+
+.port-video {
+    margin-top: 0;
+    padding: 1rem 1rem 3rem;
+    max-width: 100vw;
+}
+
+.videos {
+    max-width: 1024px;
+}
+
+
+.pv1 {
+    background-color: #eaeaea;
+}
+
+.pv2 {
+    background-color: white;
+}
+
+.pv3 a,
+.pv1 a {
+    color: black;
+    cursor: pointer;
+}
+
+.pv2 {
+    background-color: #414b5a;
+    color: white;
+}
+
+.pv2 a {
+    color: white;
+    cursor: pointer;
+}
+
+.pv3 img {
+    width: 100%;
+}
+
+.port-video a:hover {
+    color: black;
+}
+
 
 /*-----Kampagne spil-----*/
 
@@ -355,8 +420,20 @@ ul.level-1 {
     max-width: 1024px;
 }
 
+.teaser h2 {
+    font-size: 1.5rem;
+}
+
 .fakta1 {
     background-color: white;
+}
+
+.fakta1 h2 {
+    font-size: 1.7rem;
+}
+
+.fakta1 h3 {
+    font-size: 1.3rem;
 }
 
 .fakta2 {
@@ -369,7 +446,6 @@ ul.level-1 {
 .quiz {
     background-color: #414b5a;
     color: white;
-    height: 300px;
 }
 
 .quiz h3 {
@@ -381,9 +457,10 @@ ul.level-1 {
     font-size: 1.2rem;
 }
 
-.quiz a {
+.quiz .section_txt a {
     color: #fd6d6f;
     font-family: safety;
+    font-size: 1.3rem;
     transition: all .3s ease;
     margin: 4rem 0;
 }
@@ -398,6 +475,10 @@ ul.level-1 {
 .infografik {
     background-color: #414b5a;
     color: white;
+}
+
+.infografik h2 {
+    font-size: 1.7rem;
 }
 
 /*-----Historier-----*/
@@ -417,9 +498,13 @@ ul.level-1 {
     max-width: 1024px;
 }
 
-.historier_txt a {
+.historier a {
+    color: #fd6d6f;
     color: #fd6d6f;
     font-family: safety;
+    font-size: 1rem;
+    transition: all .3s ease;
+    margin: 4rem 0;
 }
 
 
@@ -652,6 +737,9 @@ footer a {
     background-color: #3f0;
 }
 
+.tilbage {
+    width: 160px;
+}
 
 .tilbage img {
     width: 20px;
@@ -702,6 +790,42 @@ footer a {
         margin-top: 600px;
     }
 
+    /*-----Kampagne video-----*/
+
+    .videoInfo_wrapper h2 {
+        font-size: 2rem;
+        width: 100vw;
+    }
+
+    .videoInfo_wrapper {
+        height: 90vh;
+    }
+
+    .videoInfo {
+        height: 500px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*-----Video portfolio-----*/
+
+    .port-video {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pv3 img {
+        max-width: 700px;
+    }
+
+    .videos {
+        width: 1024px;
+    }
+
+
     /*-----Kampagne spil-----*/
 
     .section_wrapper {
@@ -722,6 +846,14 @@ footer a {
     /*-----Infografik-----*/
 
     .infografik img {
+        width: 500px;
+    }
+
+    .infografik h2 {
+        font-size: 2.4rem;
+    }
+
+    .infografik .section_item {
         width: 500px;
     }
 
@@ -759,8 +891,8 @@ footer a {
     /*-----Quiz-----*/
 
     .quiz {
-        display: block;
-        justify-content: flex-start;
+        display: flex;
+        justify-content: center;
     }
 
     .quiz h3 {
@@ -846,6 +978,7 @@ footer a {
 
     .logo-container {
         padding: 10px;
+        z-index: 9999;
     }
 
     .logo {
@@ -860,14 +993,14 @@ footer a {
         transform: translateX(0%);
         opacity: 1;
         justify-content: flex-end;
-        width: 100%;
+        width: 80vw;
         height: 10vh;
-        margin: 0;
+        margin-left: 200px;
         z-index: 300;
     }
 
     .omOs {
-        margin-right: 20vw;
+        margin-right: 10vw;
         /*margin-right: 300px;*/
     }
 
@@ -962,7 +1095,7 @@ footer a {
     }
 
     .toBoxe {
-        top: 63.5vh;
+        top: 500px;
     }
 
 
@@ -997,6 +1130,17 @@ footer a {
         display: flex;
         justify-content: center;
     }
+
+    .teaser_wrapper h2 {
+        font-size: 2rem;
+    }
+
+
+    .fakta2 {
+        background-color: #414b5a;
+        color: white;
+    }
+
 
     /*-----Infografik-----*/
 
